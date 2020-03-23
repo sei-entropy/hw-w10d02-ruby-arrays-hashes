@@ -10,9 +10,12 @@
 	}
     
 
-    if start_line == "Red" && end_line == "Red"
-        start_index = subway[:Red].index(start_station)
-        end_index = subway[:Red].index(end_station)
+
+    start_index = subway[start_line.to_sym].index(start_station)
+    end_index = subway[end_line.to_sym].index(end_station)
+
+    if start_line ==  end_line 
+        
         if start_index <= end_index  
             count = end_index - start_index
         else 
@@ -20,29 +23,12 @@
         end 
 
     else 
-        park_street_red_line = subway[:Red].index("Park Street")
-        park_street_Green_line = subway[:Green].index("Park Street")
-        park_street_Orange_line = subway[:Orange].index("Park Street")
-        if start_line == "Green" 
-            park_street_start_line = park_street_Green_line
-            start_index = subway[:Green].index(start_station)
-        elsif start_line == "Red" 
-            park_street_start_line = park_street_red_line
-            start_index = subway[:Red].index(start_station)
-        else 
-            park_street_start_line = park_street_Orange_line
-            start_index = subway[:Orange].index(start_station)
-        end
-        if end_line == "Green" 
-            park_street_end_line = park_street_Green_line
-            end_index = subway[:Green].index(end_station)
-        elsif end_line == "Red" 
-            park_street_end_line = park_street_red_line
-            end_index = subway[:Red].index(end_station)
-        else 
-            park_street_end_line = park_street_Orange_line
-            end_index = subway[:Orange].index(end_station)
-        end
+        
+
+
+        park_street_start_line = subway[start_line.to_sym].index('Park Street')
+        park_street_end_line = subway[end_line.to_sym].index('Park Street')
+
         
         if park_street_start_line <= start_index
             to_park_station_startr = start_index - park_street_start_line
