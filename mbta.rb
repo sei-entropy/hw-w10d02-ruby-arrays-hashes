@@ -2,7 +2,7 @@
 # your solution here
 
 
-def stops_between_stations(start_line = gets.chomp,start_station=gets.chomp,end_line=gets.chomp , end_station=gets.chomp)
+def stops_between_stations(start_line ,start_station,end_line , end_station)
     subway_line= {
          Red: [
     "South Station",
