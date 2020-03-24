@@ -1,0 +1,12 @@
+1. [X] Same Lines
+    - [X] start station index == end station index >> same station
+    - [X] start station index < end station index >> top to bottom array
+    - [X] start station index > end station index >> bottom to top array
+
+2. [X] Different Lines
+    - [X] start station index < park street index >> top to bottom array
+        - end station index < park street index >> top to bottom
+        - end station index > park street index >> bottom to top
+    - [X] start station index > park street index >> bottom to top array
+        - end station index < park street index >> top to bottom
+        - end station index > park street index >> bottom to top
