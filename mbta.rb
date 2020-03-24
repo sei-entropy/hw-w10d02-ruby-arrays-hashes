@@ -18,6 +18,23 @@ def stops_between_stations (stLine, stStation, endLine, endStation)
     end
 end
 
+# Double Bonus
+p " Enter The Start Line ";
+stLine = gets.chomp
+
+p " Enter The Start Station ";
+stStation = gets.chomp
+
+p " Enter The End Line ";
+endLine = gets.chomp
+
+p " Enter The End Station ";
+endStation = gets.chomp
+
+## Test the double Bonus
+stops_between_stations(stLine, stStation, endLine, endStation)
+
+
 stops_between_stations('Red', 'Alewife', 'Red', 'Alewife') # 0
 stops_between_stations('Red', 'Alewife', 'Red', 'South Station') # 7
 stops_between_stations('Red', 'South Station', 'Green', 'Kenmore') # 6
